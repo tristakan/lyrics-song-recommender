@@ -4,7 +4,7 @@ Recommends a Billboard Hot 100 song that matches how you feel, based only on its
 
 Built from **7,487 Billboard Hot 100 songs (2008–2023)**, with lyrics scraped, cleaned and filtered to **5,940 English songs**, then organized with TF-IDF, K-Means clustering, LDA topic modeling and sentiment analysis.
 
-![t-SNE visualization of lyric clusters](images/tsne_clusters.png)
+![t-SNE visualization of lyric clusters](/tsne_clusters.png)
 
 ---
 
@@ -48,7 +48,7 @@ User input (happiness, cynical↔romantic, year) ──► closest song ──�
 - Tokenized with NLTK, removed standard stop words **plus lyric filler** (*oh, yeah, la, ooh, uh, hey, chorus, verse, outro*), then applied **Porter stemming** and **WordNet lemmatization**.
 - Normalized slang so variants count as one word: *wan/na → want*, *got → get*, *ya → you*.
 
-![Most frequent words](images/word_frequency.png)
+![Most frequent words](/word_frequency.png)
 
 ## 3. Clustering and topics: `clustering.ipynb`
 
@@ -64,7 +64,7 @@ User input (happiness, cynical↔romantic, year) ──► closest song ──�
 
 | Cluster 0 | Cluster 1 |
 |---|---|
-| ![Word cloud, cluster 0](images/wordcloud_cluster0.png) | ![Word cloud, cluster 1](images/wordcloud_cluster1.png) |
+| ![Word cloud, cluster 0](/wordcloud_cluster0.png) | ![Word cloud, cluster 1](/wordcloud_cluster1.png) |
 
 **From clusters to a score:** instead of a hard label, each song gets a **cynical ↔ romantic score from 0 to 1**, based on its distance to the two cluster centers (min-max scaled). Songs near the "street" center score close to 0, and songs near the "love" center score close to 1.
 
